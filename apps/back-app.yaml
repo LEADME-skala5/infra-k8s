@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: back-app
+  namespace: skala-argocd
+spec:
+  project: skala
+  source:
+    repoURL: https://github.com/LEADME-skala5/infra-k8s.git
+    targetRevision: main
+    path: back
+  destination:
+    server: https://96BD83E8CE5CE0396D006BC5CEB350B0.gr7.ap-northeast-2.eks.amazonaws.com
+    namespace: skala-team-05
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PrunePropagationPolicy=background

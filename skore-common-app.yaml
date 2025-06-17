@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: skore-common-app
+  namespace: skala-argocd
+spec:
+  destination:
+    namespace: skala-team-05
+    server: https://96BD83E8CE5CE0396D006BC5CEB350B0.gr7.ap-northeast-2.eks.amazonaws.com
+  project: skala
+  source:
+    path: common
+    repoURL: https://github.com/LEADME-skala5/infra-k8s.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PrunePropagationPolicy=background
