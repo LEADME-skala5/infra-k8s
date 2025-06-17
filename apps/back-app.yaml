@@ -4,7 +4,7 @@ metadata:
   name: skore-back-app
   namespace: skala-argocd
 spec:
-  project: class-2
+  project: class-1
   source:
     repoURL: https://github.com/LEADME-skala5/infra-k8s.git
     targetRevision: main
