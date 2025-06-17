@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: skala-team-05
     server: https://96BD83E8CE5CE0396D006BC5CEB350B0.gr7.ap-northeast-2.eks.amazonaws.com
-  project: skala
+  project: class-2
   source:
     path: common
     repoURL: https://github.com/LEADME-skala5/infra-k8s.git
