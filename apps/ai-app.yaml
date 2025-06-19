@@ -7,7 +7,7 @@ spec:
   project: class-1
   source:
     repoURL: https://github.com/LEADME-skala5/infra-k8s.git
-    targetRevision: feat/ci-cd # TODO: 나중에 main으로 수정 필요
+    targetRevision: main
     path: ai
   destination:
     server: https://96BD83E8CE5CE0396D006BC5CEB350B0.gr7.ap-northeast-2.eks.amazonaws.com
