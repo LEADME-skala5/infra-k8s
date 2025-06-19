@@ -1,25 +1,27 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   name: sk-team-05-ingress
   namespace: sk-team-05
 spec:
   ingressClassName: public-nginx
   tls:
     - hosts:
-        - 'skore.skala25a.project.skala-ai.com'
+      - skore.skala25a.project.skala-ai.com
       secretName: sk-team-05-tls
   rules:
     - host: skore.skala25a.project.skala-ai.com
       http:
         paths:
-#          - path: /
-#            pathType: Prefix
-#            backend:
-#              service:
-#                name: skore-front-service
-#                port:
-#                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: skore-front-service
+                port:
+                  number: 80
           - path: /api/v1
             pathType: Prefix
             backend:

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: skore-back-app
+  name: skore-back
   namespace: skala-argocd
 spec:
   project: class-1
