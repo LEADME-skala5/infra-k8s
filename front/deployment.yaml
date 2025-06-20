@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skore-front-deployment
+  namespace: sk-team-05
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skore-front
+  template:
+    metadata:
+      labels:
+        app: skore-front
+    spec:
+      containers:
+        - name: skore-front
+          image: idealhyun2/leadme5-front:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: NEXT_PUBLIC_API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-front-secret
+                  key: NEXT_PUBLIC_API_URL
