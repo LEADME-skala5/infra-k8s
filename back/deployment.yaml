@@ -74,3 +74,8 @@ spec:
                 secretKeyRef:
                   name: sk-team-05-back-secret
                   key: PORT
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-back-secret
+                  key: JWT_SECRET
