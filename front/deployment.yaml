@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: skore-front
-          image: idealhyun2/leadme5-front@sha256:5f08927e0f50e80ad150fde31c2af2b567f461d9ed47a104874a5c98fb8a2d26
+          image: idealhyun2/leadme5-front@sha256:359ec7b63bc26aef18e01d731d7364f53659516df54804a4051ea93278ea7a03
           ports:
             - containerPort: 80
           env:
