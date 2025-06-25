@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: skore-front
+  namespace: skala-argocd
+spec:
+  project: class-1
+  source:
+    repoURL: https://github.com/LEADME-skala5/infra-k8s.git
+    targetRevision: main
+    path: front
+  destination:
+    server: https://96BD83E8CE5CE0396D006BC5CEB350B0.gr7.ap-northeast-2.eks.amazonaws.com
+    namespace: skala-team-05
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PrunePropagationPolicy=background

@@ -24,3 +24,8 @@ spec:
                 secretKeyRef:
                   name: sk-team-05-front-secret
                   key: NEXT_PUBLIC_API_URL
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-front-secret
+                  key: JWT_SECRET
