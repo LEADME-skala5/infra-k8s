@@ -18,3 +18,59 @@ spec:
           image: idealhyun2/leadme5-ai@sha256:484e6e381ac61da539f9134dfd61b14f80bdf7fb7030a09fd25c9f004c67cdd1
           ports:
             - containerPort: 8000
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: OPENAI_API_KEY
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: DB_PORT
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: DB_PASSWORD
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: DB_NAME
+            - name: MONGO_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: MONGO_HOST
+            - name: MONGO_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: MONGO_PORT
+            - name: MONGO_USER
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: MONGO_USER
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: MONGO_PASSWORD
+            - name: MONGO_DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: MONGO_DB_NAME
