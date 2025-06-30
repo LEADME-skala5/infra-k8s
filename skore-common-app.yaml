@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: skore-common-app
+  name: skore-common
   namespace: skala-argocd
 spec:
   destination:
