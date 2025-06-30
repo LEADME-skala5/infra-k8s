@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: skore-ai
-          image: idealhyun2/leadme5-ai@sha256:309d139faaefdf53e39dcf46dc277f4658d22b82e9d8469a95cb5613f2d3c710
+          image: idealhyun2/leadme5-ai@sha256:484e6e381ac61da539f9134dfd61b14f80bdf7fb7030a09fd25c9f004c67cdd1
           ports:
             - containerPort: 8000
