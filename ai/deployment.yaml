@@ -74,3 +74,23 @@ spec:
                 secretKeyRef:
                   name: sk-team-05-ai-secret
                   key: MONGO_DB_NAME
+            - name: PINECONE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: PINECONE_API_KEY
+            - name: OPENAI_MODEL
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: OPENAI_MODEL
+            - name: OUTPUT_PATH
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: OUTPUT_PATH
+            - name: PINECONE_INDEX_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-ai-secret
+                  key: PINECONE_INDEX_NAME
