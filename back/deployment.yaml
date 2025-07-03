@@ -44,6 +44,11 @@ spec:
                 secretKeyRef:
                   name: sk-team-05-back-secret
                   key: REDIS_PORT
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: sk-team-05-back-secret
+                  key: REDIS_PASSWORD
             - name: MONGO_DB_URL
               valueFrom:
                 secretKeyRef:
