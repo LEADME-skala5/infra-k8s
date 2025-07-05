@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: skore-back
-          image: idealhyun2/leadme5-back@sha256:fd46ac614953cf821846fb3870e34d505a8f42159e9652d98a7ff489935d926f
+          image: idealhyun2/leadme5-back@sha256:b671e52d260296c25138e6aff3b814fedb5603961bb16f1c23d1b80fd51c2852
           ports:
             - containerPort: 8080
           env:
